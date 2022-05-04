@@ -1,6 +1,6 @@
 # Q-A_andEARN
 
-User stories
+User stories (MVP)
 
 As a user I would like to sign up for the Q&A app.
 
