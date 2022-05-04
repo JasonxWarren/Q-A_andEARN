@@ -1,5 +1,6 @@
 # Q-A_andEARN
 Description-
+
 This is a platform which allows users to sign up and post hard to answer questions, along with a custom budget, which will be paid out to the answerers of the question. Users can browse open questions, and provide answers, and earn tokens (from the budget). Questions and answers will be easily organized, and will eventually have category tags, which will allow easy searching. The users will also be able to view the completed questions as well. This hopefully will allow proper incentives for knowledge seekers and those looking to help, to create an active and flourishing ecosystem. 
 
 User stories (MVP)
