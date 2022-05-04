@@ -64,6 +64,7 @@ Answers-
 
 
 Starting ERD-
+
 <img width="770" alt="Screen Shot 2022-05-03 at 8 04 32 PM" src="https://user-images.githubusercontent.com/94083268/166605167-fcfa725d-c2c1-4cd3-9bf3-2466f733a9cc.png">
 
 
