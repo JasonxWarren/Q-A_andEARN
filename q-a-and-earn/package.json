@@ -1,0 +1,26 @@
+{
+  "name": "q-a-and_earn",
+  "version": "1.0.0",
+  "description": "questions and answers and earn",
+  "main": "index.js",
+  "repository": "https://github.com/JasonxWarren/Q-A_andEARN.git",
+  "author": "Jason Warren",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server",
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "yarn --cwd server start",
+    "build": "yarn --cwd client build && mv ./client/build ./server/build",
+    "start-client-dev": "yarn --cwd client start",
+    "start-server-dev": "yarn --cwd server dev",
+    "dev": "concurrently --kill-others --handle-input -n client,server 'npm:start-client-dev' 'npm:start-server-dev'"
+  },
+  "dependencies": {
+    "concurrently": "^7.1.0",
+    "yarn": "^1.22.18"
+  }
+}
