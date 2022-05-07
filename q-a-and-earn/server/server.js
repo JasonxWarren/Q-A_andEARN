@@ -12,7 +12,7 @@ const app = express();
 //const routes = require("./routes");
 
 //Configuration 
-const config= require("@Q-A-AND-EARN/config");
+const config= require("@q-a-and-earn/config");
 //Midleware
 
 //Routes and Controllers
