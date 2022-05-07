@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# Q-A_andEARN
+Description-
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a platform which allows users to sign up and post hard to answer questions, along with a custom budget, which will be paid out to the answerers of the question. Users can browse open questions, and provide answers, and earn tokens (from the budget). Questions and answers will be easily organized, and will eventually have category tags, which will allow easy searching. The users will also be able to view the completed questions as well. This hopefully will allow proper incentives for knowledge seekers and those looking to help, to create an active and flourishing ecosystem. 
 
-## Available Scripts
+User stories (MVP)
 
-In the project directory, you can run:
+As a user I would like to sign up for the Q&A app.
 
-### `npm start`
+As a user if I have an account I would like to log in to my account.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+As a user Once logged in I would like to view and edit my profile.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+As a user I would like to be able to select 3-4 expertise areas for my question. 
 
-### `npm test`
+If I am new user, I’d like to create my profile.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+As a user I would like to view active questions. 
 
-### `npm run build`
+As a user I would like to create a question to be answered. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+As a user I would like to set a maximum amount of answers on post (in question creation process). 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+As a user in the creation process, I would like to set a budget for how much I will pay to get my question answered. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+As a user I would like to see my questions in the question page. 
 
-### `npm run eject`
+As a user I would like to answer other peoples questions in the answer tab. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+As a user I would like to see how many tokens I have in my wallet/whats been spent and whats been bought. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+As a user I would like to be able to edit my question. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+As a user I would like to be able to edit my answer. 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+As a user I would like to be able to delete my profile.
 
-## Learn More
+Icebox user stories
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+As a user I would like to view my completed questions and answers in my profile (nice to have).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+As a user I would like to be able to select a winner out of the answers to my questions(nice to have).
 
-### Code Splitting
+As a user if I don't pick a winner in 20 minutes, then I want to be charged a fee, and have the budget be distributed to all the parties who answered the question. (nice to have).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+As a user I would like to be able to pay users via a third party payment processor. (nice to have).
 
-### Analyzing the Bundle Size
+As a user I would like to be able to select 3-4 expertise areas I’d like to answer within. (nice to have)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+Screenshots for Rudimental Wireframe-
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Landing page-
+<img width="948" alt="Screen Shot 2022-05-03 at 10 14 32 PM" src="https://user-images.githubusercontent.com/94083268/166614975-5844a636-8fb8-4086-9679-fec30fe8c1e9.png">
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Login page-
+<img width="999" alt="Screen Shot 2022-05-03 at 7 57 52 PM" src="https://user-images.githubusercontent.com/94083268/166604798-8cfc3d35-1cf9-4468-90ef-5fa4408ce090.png">
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+User Profile-View
 
-### `npm run build` fails to minify
+<img width="1003" alt="Screen Shot 2022-05-03 at 9 57 33 PM" src="https://user-images.githubusercontent.com/94083268/166614939-7356855c-4dbb-4249-998a-80a2131f58ae.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+User Profile-Update
+
+<img width="1002" alt="Screen Shot 2022-05-03 at 7 58 29 PM" src="https://user-images.githubusercontent.com/94083268/166604806-d1ceb99d-78f3-44c4-b3b6-3dcbedb30025.png">
+
+Questions-
+
+<img width="1001" alt="Screen Shot 2022-05-03 at 7 58 58 PM" src="https://user-images.githubusercontent.com/94083268/166604831-bae5a25d-a21b-4703-b345-25f7759425a4.png">
+
+Answers-
+
+<img width="995" alt="Screen Shot 2022-05-03 at 7 59 25 PM" src="https://user-images.githubusercontent.com/94083268/166604840-b27545d9-293e-46fa-a87b-15fa9c2c4120.png">
+
+
+Starting ERD-
+
+<img width="770" alt="Screen Shot 2022-05-03 at 8 04 32 PM" src="https://user-images.githubusercontent.com/94083268/166605167-fcfa725d-c2c1-4cd3-9bf3-2466f733a9cc.png">
+
+
+
+
