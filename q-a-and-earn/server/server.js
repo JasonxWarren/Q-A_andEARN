@@ -1,3 +1,5 @@
+const path = require('path');
+require("dotenv").config({path: "../.env"})
 // External modules
 const express = require('express');
 const cors = require('cors');
