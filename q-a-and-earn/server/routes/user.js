@@ -1,5 +1,6 @@
 const router = require("express").Router()
 const {user} = require("../controllers")
+const authRequired = require("../middleware/auth.required")
 
 //routes 
 router.get("/",  user.index)
