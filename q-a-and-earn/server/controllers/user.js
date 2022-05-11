@@ -48,7 +48,7 @@ const show= (req,res) => {
         }  else {
             // console.log(foundUser)
             return res.status(200).json({
-            message: "Updated User Profile",
+            message: "Found User Profile",
             data: foundUser
                 })
             }
