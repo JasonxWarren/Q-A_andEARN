@@ -29,6 +29,7 @@ const index = (req, res) => {
             .status(200)
             .json({
                 message: "Found users",
+                data: foundUser
             })
     })
 }

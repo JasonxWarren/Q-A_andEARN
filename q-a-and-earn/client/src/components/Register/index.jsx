@@ -20,12 +20,12 @@ const Register = () => {
     };
 
     return (
-        <div className="container">
-            <form className = "loginForm">
-            <h1 className="formTitle">Create an Account</h1>
-            <div className="loginContainer">
+        <div>
+            <form>
+            <h1>Create an Account</h1>
+            <div>
                 <label htmlFor="username">
-            Email</label>
+            Username</label>
                     <input 
                         className = "input"
                         onChange={(e) => setusername(e.target.value)}

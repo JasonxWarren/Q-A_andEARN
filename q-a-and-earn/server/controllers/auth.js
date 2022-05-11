@@ -12,16 +12,6 @@ const register = async (req, res) => {
 
         if(foundUser) {
            
-            // const updatedUser = await db.User.findByIdAndUpdate(
-            //     {
-            //         _id: foundUser._id
-            //     },
-            //     {
-            //         $set: { password: hash }
-            //     },
-            //     { new: true }
-            //)
-            // console.log("inside founduser if statement")
             return res
                 .status
                 .json({ message: "username in use."})
