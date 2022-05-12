@@ -7,12 +7,11 @@ const userSchema = new Schema ({
         select: false,
     },
     username:String,
-    description:String,
-    walletId: String,
-    walletBalance: Number,
-    description: String,
+    description: {type: String,  default:"hello I ask good questions, and give good answers, update me to make this description your own"},
+    walletId: {type: String, default: mongoose.Types.ObjectId},
+    walletBalance: {type: Number, default:"100"},
     profile_image: {type: String},
-    expertise: [String],
+    expertise: {type: [String] , default:"computers, cars"},
     Answers: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Answer"
