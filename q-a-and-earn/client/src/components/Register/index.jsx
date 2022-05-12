@@ -35,7 +35,7 @@ const Register = () => {
                         placeholder="username"
                     />
             
-                <label for="chk" aria-hidden="true" htmlFor="password">
+                <label form="chk" aria-hidden="true" htmlFor="password">
             Password</label>
                     <input 
                         className = "input"

@@ -6,7 +6,7 @@ const Logout = () => {
 
     const handleSubmit = (e) => {
          authService.logout()
-         console.log("im outta here,log out")
+         console.log("log out")
     }
 
 return (

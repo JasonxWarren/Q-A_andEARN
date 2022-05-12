@@ -6,12 +6,12 @@ const UserIndex = () => {
     const [username, setUsername]= useState("");
     
 
-    const getExistingProfile = async () => {
-        let res = await userProfileService.show()
+    const getExistingProfile =  () => {
+        let res =  userProfileService.show()
             .then((data) => {
-            // console.log("get existing profile: ", data.data.data)
+             console.log("get existing profile: ", data.data.data)
             setUsername(data.data.data.username);
-            setDescription(data.data.data.description);
+            // setUser(data.data.description);
         });
         if ( !res === 201 ) {
             alert("Profile is here") 
@@ -24,8 +24,8 @@ const UserIndex = () => {
 return (    
     <div>
                          <h3>Welcome</h3>
-                            {/* <h2>{user.username}</h2>
-                            <p>{user.description}</p> */}
+                            <h2>{username}</h2>
+                           
                 </div>
 );  
 }

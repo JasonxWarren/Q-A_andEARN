@@ -29,7 +29,6 @@ const index = (req, res) => {
             .status(200)
             .json({
                 message: "Found users",
-                data: foundUser
             })
     })
 }
@@ -37,9 +36,10 @@ const index = (req, res) => {
 
 //Show user profile
 const show= (req,res) => {
-    db.User.findById(req.userId, 
-        (err,foundUser) => {
-            // console.log("FOUND BY ID" + foundUser)
+    console.log(req)
+    db.User.findById(req.userId, (err,foundUser) => {
+             console.log("FOUND BY ID" + foundUser)
+             console.log(req.user)
         if (err) {
             return res.status(400)
             .json({
@@ -47,7 +47,7 @@ const show= (req,res) => {
                 error: err,
             }) 
         }  else {
-            // console.log(foundUser)
+             console.log(foundUser)
             return res.status(200).json({
             message: "Found User Profile",
             data: foundUser

@@ -1,6 +1,6 @@
 import client from "./axios.config";
 const auth = "/auth";
-const user = "/users";
+const user = "/user";
 
 const register = (username, password) => {
     return client
