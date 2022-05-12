@@ -27,9 +27,9 @@ const UserIndex = () => {
 return (    
     <div>
                          <h3>Welcome</h3>
-                            <h1>{walletBalance}</h1>
-                            <h2>{username}</h2>
-                            <h3>{description}</h3>
+                            <h1>Wallet Balance: {walletBalance}</h1>
+                            <h2>Username: {username}</h2>
+                            <h3>Description: {description}</h3>
                             <button>{expertise}</button>
                            
                 </div>

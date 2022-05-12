@@ -14,7 +14,7 @@ const Login = ({checkUserActive}) => {
             setPassword("");
         });
         
-        window.location.href="/user";
+        window.location.href="/user/:id";
     };
     return (
         <div>
