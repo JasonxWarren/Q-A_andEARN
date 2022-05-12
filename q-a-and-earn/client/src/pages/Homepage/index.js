@@ -50,7 +50,7 @@ const Home = () => {
 
             <Routes>
                 <Route  
-                    path='/'
+                    path='/user/:id'
                     element={<UserIndex/>}
                     />
                     
