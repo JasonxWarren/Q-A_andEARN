@@ -86,6 +86,25 @@ const updateProfile= (req, res) => {
     }
     })
 }
+const deleteProfile = (req, res) => {
+    db.User.findByIdAndDelete(req.userId, (err, deleteUser)=>{
+        if (err) {
+        return res
+        .status(400)
+        .json({
+            message: "Bad Request; Profile was not deleted",
+            error: err,
+        })
+    }else{
+    return res
+        .status(200)
+        .json({
+            message: "Profile Deleted",
+            data: deleteUser
+        })
+    }
+    })
+}
 
 
 
@@ -93,5 +112,6 @@ module.exports = {
     index,
     show,
     updateProfile,
+    deleteProfile,
 }
 

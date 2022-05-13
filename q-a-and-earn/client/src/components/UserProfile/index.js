@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import * as userProfileService from "../../api/userprofile.service";
+import * as authService from "../../api/auth.service";
 
 const UserIndex = () => {
     const [description, setDescription]= useState("");
@@ -33,6 +34,16 @@ const UserIndex = () => {
             alert("Profile is here") 
         } 
     }
+    const handleDelete = async () => {
+        console.log('in handleDelete');
+        let res = await userProfileService.destroy()
+            .then(() => {
+                // user flow for log out, send back to register?
+            });
+         if ( !res === 201 ) {
+             alert("Profile Not Deleted") 
+         } 
+    }   
     
     useEffect(() => {
         getExistingProfile();
@@ -72,6 +83,8 @@ return (
         </label>
     </form>
     <button onClick={handleSubmit}>Update user profile information </button>
+    <break></break>
+    <button onClick={() => {handleDelete(); alert("profile deleted")}}>Delete</button>
 </div>               
 );
 } 

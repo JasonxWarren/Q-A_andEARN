@@ -10,5 +10,8 @@ const show = (data, id) => {
 const update =(data, id) => {
     return client.put(`${userProfile}/${id}`, data)
 }
+const destroy = (id) => {
+    return client.delete(`${userProfile}/${id}`)
+}
 
-export {show, update };
+export {show, update, destroy };
