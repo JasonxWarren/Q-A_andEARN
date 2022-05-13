@@ -7,7 +7,7 @@ return (
     <>
     <Routes>
         <Route  
-        path='/user/:id'
+        path="/user/:id"
         element={<UserIndex/>}
         />
     </Routes>

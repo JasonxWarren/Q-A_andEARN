@@ -7,6 +7,8 @@ const userProfile = '/user';
 const show = (data, id) => {
     return client.get(`${userProfile}/${id}`, data)
 }
+const update =(data, id) => {
+    return client.put(`${userProfile}/${id}`, data)
+}
 
-
-export {show };
+export {show, update };

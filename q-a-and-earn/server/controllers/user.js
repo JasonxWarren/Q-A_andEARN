@@ -58,8 +58,6 @@ const show= (req,res) => {
 
 //Update profile 
 const updateProfile= (req, res) => {
-    // console.log("req.body: ", req.body)
-    // console.log("userId: ", req.userId)
     db.User.findByIdAndUpdate(
         {_id: req.userId },
         {
@@ -70,21 +68,16 @@ const updateProfile= (req, res) => {
         }, 
         {new: true},
         (err,foundProfile) => {
-            // console.log("found profile line 55: ",foundProfile)
         if (err) {
             return res.status(400)
             .json({
-                message: "Failed to edit the profile.",
+                message: "Failed to edit the user profile.",
                 error: err,
             })
         } 
-        //else {
-        //     console.log(foundProfile);
-        //     foundProfile[0].push(req.userId.username)
-        //     foundProfile[0].save();
-        // }
+       
          else {
-            // console.log("found profile line 69: "+foundProfile)
+            console.log("found profile line 69: "+foundProfile)
             return res.status(200).json({
                 message: "Updated User Profile",
                 data: foundProfile,
