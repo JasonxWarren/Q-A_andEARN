@@ -5,7 +5,6 @@ const questionSchema = new Schema ({
     budget:Number,
     description:String,
     name: String,
-    description: String,
     image_question: {type: String},
     Answer_total: Number,
     time_limit: Number,

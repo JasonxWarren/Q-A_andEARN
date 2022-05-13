@@ -5,7 +5,7 @@ const index = (req, res) => {
     let incomingReq = {
         User: req.userId,
     }
-    db.Question.find(incomingReq, (err, foundPosts) => {
+    db.Question.find(incomingReq, (err, foundQuestions) => {
         if (err) {
             return res
                 .status(400)
@@ -20,6 +20,45 @@ const index = (req, res) => {
                 message: "Found Questions",
                 data: foundQuestions
             })
+    })
+}
+const create = (req, res) => {
+    let incomingReq = {
+        User: req.userId,
+        budget: req.body.budget,
+        name: req.body.name,
+        description: req.body.description,
+        time_limit: req.body.time_limit,
+    }
+    db.Question.create(
+        incomingReq, 
+        (err, savedQuestion) => {
+        if (err) {
+            // console.log(err)
+            return res.status(400).json({
+                message: "Error 400",
+                error: err 
+            })
+        } else {
+            // console.log("savedPost: ",savedPost)
+            db.User.findById(incomingReq.User)
+            .exec(function (err, foundUser) {
+                if (err) return res 
+                    .status(400)
+                    .json({
+                        message: "Failed to find user who is trying to create question",
+                        error: err
+                    })
+                else {
+                    foundUser.Questions.push(savedQuestion);
+                    foundUser.save();
+                }
+            });
+            return res.status(201).json({
+                message: "Created Question",
+                data: savedQuestion
+            })
+        }
     })
 }
 
