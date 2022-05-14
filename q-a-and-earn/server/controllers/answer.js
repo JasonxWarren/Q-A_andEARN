@@ -23,7 +23,6 @@ const index = (req, res) => {
     })
 }
 const create = (req, res) => {
-    console.log(req.body)
     let incomingReq = {
         User: req.userId,
         answer: req.body.answer,
@@ -32,7 +31,6 @@ const create = (req, res) => {
     db.Answer.create(
         incomingReq, 
         (err, savedAnswer) => {
-            console.log(incomingReq)
         if (err) {
             // console.log(err)
             return res.status(400).json({

@@ -8,6 +8,7 @@ import UserIndex from "../../components/UserProfile";
 import Question from "../../components/Question/QuestionCreate.jsx";
 import QuestionIndex from "../../components/Question/QuestionIndex"
 import Answer from "../../components/Answer/AnswerCreate.jsx";
+import AnswerView from "../../components/Answer/AnswerIndex";
 const reducer = (prevState, action) => {
     switch(action.type) {
         case 'setIsLoggedIn':
@@ -66,7 +67,11 @@ const Home = () => {
                      <Route  
                     path='/answer/create'
                     element={<Answer/>}
-                    />    
+                    />  
+                     <Route  
+                    path='/answer/'
+                    element={<AnswerView/>}
+                    />   
             </Routes>
         </>
     )
