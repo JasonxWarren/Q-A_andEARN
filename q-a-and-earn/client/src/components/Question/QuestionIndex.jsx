@@ -17,7 +17,8 @@ export default function QuestionView() {
 
     return(
         <>
-            <h1>{question[0].name}</h1>
+            <h2>here</h2>
+            <h1>{question[1].name}</h1>
             
             <Question />
         </>
