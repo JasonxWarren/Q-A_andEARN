@@ -6,6 +6,7 @@ import Welcome from "../../components/Start";
 import NavBar from "../../components/NavBar";
 import UserIndex from "../../components/UserProfile";
 import Question from "../../components/Question/QuestionCreate.jsx";
+import QuestionIndex from "../../components/Question/QuestionIndex"
 
 const reducer = (prevState, action) => {
     switch(action.type) {
@@ -55,9 +56,13 @@ const Home = () => {
                     element={<UserIndex/>}
                     />
                 <Route  
-                    path='/question/'
+                    path='/question/new'
                     element={<Question/>}
-                    />    
+                    />
+                    <Route  
+                    path='/question/'
+                    element={<QuestionIndex/>}
+                    />      
             </Routes>
         </>
     )
