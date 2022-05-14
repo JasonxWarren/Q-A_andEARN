@@ -1,6 +1,7 @@
-// const router = require('express').Router();
-// const {question} = require('../controllers')
-//const authRequired = require ('../middleware/auth.required')
-// router.get("/", question.index);
+const router = require('express').Router();
+const {question} = require('../controllers')
+const authRequired = require ('../middleware/auth.required')
 
-// module.exports = router;
+router.get('/', authRequired, question.index);
+router.post("/", authRequired, question.create);
+module.exports = router;

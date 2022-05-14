@@ -5,6 +5,7 @@ import * as authService from "../../api/auth.service";
 import Welcome from "../../components/Start";
 import NavBar from "../../components/NavBar";
 import UserIndex from "../../components/UserProfile";
+import Question from "../../components/Question/QuestionCreate.jsx";
 
 const reducer = (prevState, action) => {
     switch(action.type) {
@@ -53,7 +54,10 @@ const Home = () => {
                     path='/user/:id'
                     element={<UserIndex/>}
                     />
-                    
+                <Route  
+                    path='/question/'
+                    element={<Question/>}
+                    />    
             </Routes>
         </>
     )
