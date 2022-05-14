@@ -7,7 +7,7 @@ import NavBar from "../../components/NavBar";
 import UserIndex from "../../components/UserProfile";
 import Question from "../../components/Question/QuestionCreate.jsx";
 import QuestionIndex from "../../components/Question/QuestionIndex"
-
+import Answer from "../../components/Answer/AnswerCreate.jsx";
 const reducer = (prevState, action) => {
     switch(action.type) {
         case 'setIsLoggedIn':
@@ -62,7 +62,11 @@ const Home = () => {
                     <Route  
                     path='/question/'
                     element={<QuestionIndex/>}
-                    />      
+                    />    
+                     <Route  
+                    path='/answer/create'
+                    element={<Answer/>}
+                    />    
             </Routes>
         </>
     )
