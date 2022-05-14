@@ -27,11 +27,12 @@ const create = (req, res) => {
     let incomingReq = {
         User: req.userId,
         answer: req.body.answer,
-        Question: req.body.questionId,
+        questionSelected: req.body.questionSelected,
     }
     db.Answer.create(
         incomingReq, 
         (err, savedAnswer) => {
+            console.log(incomingReq)
         if (err) {
             // console.log(err)
             return res.status(400).json({
@@ -53,7 +54,9 @@ const create = (req, res) => {
                     foundUser.save();
                 }
             });
-            db.Question.findById(incomingReq.Question)
+            // db.Question.findById(incomingReq.Question)
+            // db.Question.find({})
+            db.Question.findById(incomingReq.questionSelected)
             .exec(function (err, foundQuestion){
                 if (err) return res 
                     .status(400)

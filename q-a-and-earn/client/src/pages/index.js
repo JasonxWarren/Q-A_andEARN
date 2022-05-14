@@ -1,7 +1,7 @@
 import {Route, Routes} from "react-router-dom";
 import UserIndex from "../components/UserProfile/index.js";
 import Question from "../components/Question/QuestionCreate.jsx";
-import Answer from "../components/Answer/AnswerCreate.jsx"
+import Answer from "../components/Answer/AnswerCreate"
 const Home = () => {
 
 return (

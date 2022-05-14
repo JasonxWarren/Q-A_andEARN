@@ -10,9 +10,9 @@ const answerSchema = new Schema ({
         type: mongoose.Schema.Types.ObjectId,
         ref: "User"
     }],
-    Answers: [{
+    Questions: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Answer"
+        ref: "Question"
     }],
 })
 
