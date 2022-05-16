@@ -2,10 +2,11 @@ const db = require("../models");
 
 
 const index = (req, res) => {
+    console.log("here in controllers")
     let incomingReq = {
         User: req.userId,
     }
-    db.Answers.find(incomingReq, (err, foundAnswers) => {
+    db.Answer.find(incomingReq, (err, foundAnswers) => {
         if (err) {
             return res
                 .status(400)
@@ -63,6 +64,7 @@ const create = (req, res) => {
                         error: err
                     })
                 else {
+                    console.log(req.body)
                     foundQuestion.Answers.push(foundQuestion);
                     foundQuestion.save();
                 }

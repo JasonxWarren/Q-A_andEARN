@@ -7,6 +7,9 @@ const show = (id) => {
 const create = (data) => {
     return client.post(`${answer}`, data)
 }
+const getAll = (data) => {
+    return client.get(`${answer}`, data)
+}
 
 
-export {  show , create }
+export {  show , create, getAll }

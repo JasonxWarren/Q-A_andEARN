@@ -8,9 +8,10 @@ export default function AnswerView() {
     
     useEffect(() => {
         async function getAnswer() {
-            const questions = await answerService.show();
+            const answer = await answerService.getAll();
                 setAnswer(answer.data.data);
-                console.log(answer.data.data[0].answer)
+                console.log(answer.data.data)
+                console.log("in answer component")
         }
         getAnswer();
     }, [])
@@ -25,7 +26,7 @@ export default function AnswerView() {
                     </li>
                 )
             }) };  </h3> */}
-             <h1>{answer[0]?.name}</h1>
+             <h1>answer.Answers</h1>
             <Question />
         </>
     )
