@@ -49,6 +49,7 @@ export default function QuestionView() {
                         return (
                         <li style={{listStyle:"none"}} key={index}>
                             <h4>{questionInfo?.name}</h4>
+                            <Answer questionInfo={questionInfo}/>
                             {/* {console.log(answerInfo)}  */}
                         </li> )}
             )}

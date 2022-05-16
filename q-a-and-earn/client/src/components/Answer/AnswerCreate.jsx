@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import * as answerService from '../../api/answer.service';
-
-const Answer = () => {
+import { string } from 'prop-types';
+const Answer = (questionInfo) => {
+    console.log(questionInfo.questionInfo?._id)
     const [questionSelected, setQuestion]= useState("");
     const [answer, setAnswer] = useState("");
     const handleSubmit = async () => {
-        let newAnswer = { questionSelected,answer };
+        // setQuestion(questionInfo.questionInfo?._id)
+        console.log(questionSelected)
+        let newAnswer = { questionSelected, answer };
         let res = await answerService.create(newAnswer)
             .then(() => {
                 setQuestion("");
@@ -22,11 +25,11 @@ const Answer = () => {
         <form>
         <label>What question are you answering:
                 <input  
-                    onChange={(e) => setQuestion(e.target.value)}
-                    value={questionSelected}
+                    onChange={(e) => setQuestion(questionInfo.questionInfo?._id)}
+                    value={questionInfo}
                     type="text"
                     name="content"
-                    placeholder="pick your question"
+                    placeholder={questionInfo.questionInfo?._id}
                 /></label>
                 <label>Add your Answer:
                 <input  
