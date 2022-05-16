@@ -64,9 +64,22 @@ const create = (req, res) => {
                         error: err
                     })
                 else {
-                    console.log(req.body)
                     foundQuestion.Answers.push(savedAnswer);
                     foundQuestion.save();
+                }
+            });
+            db.Answer.findById(savedAnswer)
+            .exec(function (err, foundAnswer){
+                if (err) return res 
+                    .status(400)
+                    .json({
+                        message: "Failed to find question that an answer is being created for",
+                        error: err
+                    })
+                else {
+                    console.log("here in answer")
+                    foundAnswer.Questions.push(incomingReq.questionSelected);
+                    foundAnswer.save();
                 }
             });
             return res.status(201).json({
