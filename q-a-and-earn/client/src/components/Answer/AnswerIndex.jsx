@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import * as answerService from "../../api/question.service"
+import * as answerService from "../../api/answer.service"
 import Answer from '../Answer/AnswerCreate.jsx';
 import Question from '../Question/QuestionIndex';
 export default function AnswerView() {
@@ -26,7 +26,15 @@ export default function AnswerView() {
                     </li>
                 )
             }) };  </h3> */}
-             <h1>answer.Answers</h1>
+            {answer.map((answerInfo, index) => {
+                        return (
+                        <li style={{listStyle:"none"}} key={index}>
+                            <h4>{answerInfo?.answer}</h4>
+                            {/* {console.log(answerInfo)}  */}
+                        </li>
+                        )  })
+            }
+             {/* <h1>{answer[0].answer}</h1> */}
             <Question />
         </>
     )
