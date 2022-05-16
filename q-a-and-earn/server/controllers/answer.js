@@ -65,7 +65,7 @@ const create = (req, res) => {
                     })
                 else {
                     console.log(req.body)
-                    foundQuestion.Answers.push(foundQuestion);
+                    foundQuestion.Answers.push(savedAnswer);
                     foundQuestion.save();
                 }
             });
