@@ -51,6 +51,7 @@ const create = (req, res) => {
                     })
                 else {
                     foundUser.Questions.push(savedQuestion);
+                    foundUser.walletBalance=foundUser.walletBalance-incomingReq.budget
                     foundUser.save();
                 }
             });

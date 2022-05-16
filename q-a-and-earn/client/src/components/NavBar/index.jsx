@@ -27,6 +27,9 @@ export default function NavBar({checkUserActive}) {
                 to="/question/" style={contentStyles}
             >Questions</NavLink>
              <NavLink
+                to="/question/new" style={contentStyles}
+            >Create a Question</NavLink>
+             <NavLink
                 to="/answer/" style={contentStyles}
             >Answers</NavLink>
     
