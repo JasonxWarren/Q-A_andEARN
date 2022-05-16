@@ -45,6 +45,13 @@ export default function QuestionView() {
                     </li>
                 )
             }) };  </h3> */}
+            {question.map((questionInfo, index) => {
+                        return (
+                        <li style={{listStyle:"none"}} key={index}>
+                            <h4>{questionInfo?.name}</h4>
+                            {/* {console.log(answerInfo)}  */}
+                        </li> )}
+            )}
              <h1>{question[0]?.name}</h1>
              <Answer />
             {/* <Question /> */}
