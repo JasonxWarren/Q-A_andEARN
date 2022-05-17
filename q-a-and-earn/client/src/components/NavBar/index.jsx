@@ -1,7 +1,7 @@
 // import { Route, Routes } from "react-router-dom";
 import { NavLink } from 'react-router-dom';
 import * as authService from '../../api/auth.service';
-
+import Container from 'react-bootstrap/Container';
 
 const contentStyles = {
 	padding: "2px",
@@ -18,6 +18,7 @@ export default function NavBar({checkUserActive}) {
 
     return (      
         <div>
+            <Container>
             <div>
                 <h1>Q and A</h1>
             </div>
@@ -34,16 +35,12 @@ export default function NavBar({checkUserActive}) {
                 to="/answer/" style={contentStyles}
             >Answers</NavLink>
     
-        
-
             <NavLink className="logout"
                 to='/'
                 onClick = {handleLogout}
             >Logout
             </NavLink>
-           
-
-
+            </Container>
          </div>
         
     )
