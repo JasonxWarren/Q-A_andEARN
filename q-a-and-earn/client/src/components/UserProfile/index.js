@@ -81,7 +81,7 @@ return (
                 placeholder="input your expertise"
             />
   </Form.Group>
-  <Button vonClick={handleSubmit}>Update user profile information
+  <Button onClick={handleSubmit}>Update user profile information
   </Button>
 </Form>
     {/* <form>

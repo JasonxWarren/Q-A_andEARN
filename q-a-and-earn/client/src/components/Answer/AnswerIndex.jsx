@@ -18,11 +18,9 @@ export default function AnswerView() {
         });
     }
     const findOtherUsers = async () => {
-       await userProfileService.showAll().then((res) => {
-        console.log(res.data)
-        setAllUsers(res.data.data)
-       })
-       
+       const allUsers= await userProfileService.showAll();
+       console.log(allUsers)
+       setAllUsers(allUsers.data.data)
     }
 
     useEffect(() => {
@@ -50,27 +48,29 @@ export default function AnswerView() {
             {answer.map((answerInfo, index) => {
                 if(user._id === answerInfo.User[0]){
                     return (<div>
-                    <h3 key={index}>{answerInfo?.answer}</h3>  
+                    <h3>{answerInfo?.answer}</h3> 
+                   <h4>{user.username}</h4> 
                    </div>
                            )
                 }
                     else if(user._id !== answerInfo.User[0]){
+                        return (<h1>here in else</h1>)
                         // {allUsers.map((UserInfo, index) => {
                         //     if (UserInfo._id ===answerInfo.User[0]){
-                                return(
-                                    <li style={{listStyle:"none"}} key={index}>
-                                    <Card><h4>{answerInfo?.answer}</h4>
-                                         {/* <h5>{answerInfo?.</h5> */}
-                                    </Card>
-                                    {console.log(answerInfo)} 
-                                </li>
+                        //         return(
+                        //             <li style={{listStyle:"none"}} key={index}>
+                        //             <Card><h4>{answerInfo?.answer}</h4>
+                        //                  {/* <h5>{answerInfo?.</h5> */}
+                        //             </Card>
+                        //             {console.log(answerInfo)} 
+                        //         </li>
                                     
-                                )
-                            //   }
-                            //    }
-                            //     )
+                        //         )
+                        //       }
+                        //        }
+                        //         )
                     
-                            //       }         
+                        //           }         
             }
             })
         }
