@@ -1,11 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import * as answerService from "../../api/answer.service"
+import * as userProfileService from "../../api/userprofile.service"
 import Answer from '../Answer/AnswerCreate.jsx';
 import Question from '../Question/QuestionIndex';
+import Container from 'react-bootstrap/Container';
+import Card from 'react-bootstrap/Card';
+
 export default function AnswerView() {
 
     const [answer, setAnswer] = useState([]);
+    const [user, setUser] = useState("");
+    const [allUsers, setAllUsers]= useState("");
     
+    const findUser = async () => {
+        await userProfileService.show().then((res) => {
+            setUser(res.data.data);
+        });
+    }
+
     useEffect(() => {
         async function getAnswer() {
             const answer = await answerService.getAll();
@@ -14,10 +26,11 @@ export default function AnswerView() {
                 console.log("in answer component")
         }
         getAnswer();
+        findUser();
     }, [])
     return(
         <>
-            <h2>here</h2>
+            <h2>Welcome {user.username}</h2>
             {/* <h3> { for (let i=0; i<question.length; i++) {
                 question[i].name?.map((naming,index)=> {
                 return (
@@ -27,12 +40,19 @@ export default function AnswerView() {
                 )
             }) };  </h3> */}
             {answer.map((answerInfo, index) => {
+                if(user._id === answerInfo.User[0]){
+                    return <h1>we found your answer</h1>}
+                    else{
                         return (
+                        
                         <li style={{listStyle:"none"}} key={index}>
-                            <h4>{answerInfo?.answer}</h4>
-                            {/* {console.log(answerInfo)}  */}
+                            <Card><h4>{answerInfo?.answer}</h4>
+                                 {/* <h5>{answerInfo?.</h5> */}
+                            </Card>
+                            {console.log(answerInfo)} 
                         </li>
-                        )  })
+                        
+                        )}  })
             }
              {/* <h1>{answer[0].answer}</h1> */}
             <Question />

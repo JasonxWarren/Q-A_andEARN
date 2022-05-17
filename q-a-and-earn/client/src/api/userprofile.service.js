@@ -7,6 +7,9 @@ const userProfile = '/user';
 const show = (data, id) => {
     return client.get(`${userProfile}/${id}`, data)
 }
+const showAll = (data, id) => {
+    return client.get(`${userProfile}/${id}/allothers`, data)
+}
 const update =(data, id) => {
     return client.put(`${userProfile}/${id}`, data)
 }
@@ -14,4 +17,4 @@ const destroy = (id) => {
     return client.delete(`${userProfile}/${id}`)
 }
 
-export {show, update, destroy };
+export {show,showAll, update, destroy };
