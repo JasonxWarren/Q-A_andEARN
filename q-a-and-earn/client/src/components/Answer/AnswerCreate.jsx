@@ -5,13 +5,14 @@ const Answer = (questionInfo) => {
     console.log(questionInfo.questionInfo?._id)
     const [questionSelected, setQuestion]= useState("");
     const [answer, setAnswer] = useState("");
+    // const [questionInter, setQuestionInter]=useState("")
     const handleSubmit = async () => {
-        // setQuestion(questionInfo.questionInfo?._id)
-        console.log(questionSelected)
+        console.log("here in answercreate")
         let newAnswer = { questionSelected, answer };
+        console.log(newAnswer)
         let res = await answerService.create(newAnswer)
             .then(() => {
-                setQuestion("");
+                setQuestion(questionSelected);
                 setAnswer("");
                 // console.log(newAnswer);
             });
@@ -20,13 +21,19 @@ const Answer = (questionInfo) => {
                 alert("Your answer failed to save.", res.status)
         }
     };
+
+    // const onClick = () => {
+    //     setQuestion(questionInter)
+    //     handleSubmit()
+    // }
+
     return (
 <div>
         <form>
-        <label>What question are you answering:
+        <label>What question are you answering:{questionInfo.questionInfo._id}
                 <input  
-                    onChange={(e) => setQuestion(questionInfo.questionInfo?._id)}
-                    value={questionInfo}
+                    onChange={(e) => setQuestion(questionInfo.questionInfo._id)}
+                    value={questionSelected}
                     type="text"
                     name="content"
                     placeholder={questionInfo.questionInfo?._id}

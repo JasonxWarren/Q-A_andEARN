@@ -49,12 +49,13 @@ export default function QuestionView() {
                         return (
                         <li style={{listStyle:"none"}} key={index}>
                             <h4>{questionInfo?.name}</h4>
+                            {console.log("qindex questionInfo:"+questionInfo)}
                             <Answer questionInfo={questionInfo}/>
                             {/* {console.log(answerInfo)}  */}
                         </li> )}
             )}
              <h1>{question[0]?.name}</h1>
-             <Answer />
+             {/* <Answer /> */}
             {/* <Question /> */}
         </>
     )
