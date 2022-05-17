@@ -4,7 +4,7 @@ import Register from "../Register";
 
 const Welcome = ({ checkUserActive }) => {
 	return (
-		<div>
+		<div className="container1">
 			<div className="center">
 			<div>
 			<h1>Welcome</h1>

@@ -20,7 +20,7 @@ export default function NavBar({checkUserActive}) {
         <div className="navbar-custom">
             <Container fluid>
             <div>
-                <h1>Q and A</h1>
+                <h1 style={{fontSize: "50px", color: "white", textDecoration: "underline"}}>Q and A</h1>
             </div>
             <NavLink
                 to="/user/:id" style={contentStyles}
