@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import * as answerService from '../../api/answer.service';
 import { string } from 'prop-types';
+
 const Answer = (questionInfo) => {
     console.log(questionInfo.questionInfo?._id)
     const [questionSelected, setQuestion]= useState("");
@@ -22,10 +23,6 @@ const Answer = (questionInfo) => {
         }
     };
 
-    // const onClick = () => {
-    //     setQuestion(questionInter)
-    //     handleSubmit()
-    // }
 
     return (
 <div>

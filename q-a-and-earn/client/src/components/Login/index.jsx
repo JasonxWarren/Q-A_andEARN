@@ -1,6 +1,5 @@
 import { useState } from "react";
 import * as authService from "../../api/auth.service";
-
 const Login = ({checkUserActive}) => {
     const [username, setusername] =useState("")
     const [password, setPassword] =useState("");
