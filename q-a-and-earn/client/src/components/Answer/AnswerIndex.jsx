@@ -52,7 +52,7 @@ export default function AnswerView() {
                     <Card style={{backgroundColor: 'rgba(183, 179, 179, 0.5)'}} border="success">
                         <Card.Body>
                     <h3>{answerInfo?.answer}</h3> 
-                   <h4>{user.username}</h4> 
+                   <h4>{user.username}:expertise in {user.expertise}</h4> 
                    </Card.Body>
                    </Card>
                    <span></span>
@@ -64,7 +64,8 @@ export default function AnswerView() {
                         return (<Card style={{backgroundColor: 'rgba(183, 179, 179, 0.5)'}} border="warning">
                         <Card.Body>
                     <h3>{answerInfo?.answer}</h3> 
-                   <h4>{user.username}</h4> 
+                   <h4>By Another</h4> 
+                   
                    </Card.Body>
                    </Card>)
                         // {allUsers.map((UserInfo, index) => {

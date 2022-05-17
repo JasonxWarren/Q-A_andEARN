@@ -42,7 +42,7 @@ const UserIndex = () => {
         console.log('in handleDelete');
         let res = await userProfileService.destroy()
             .then(() => {
-                // user flow for log out, send back to register?
+               window.location.href = "/";
             });
          if ( !res === 201 ) {
              alert("Profile Not Deleted") 
@@ -57,7 +57,7 @@ const UserIndex = () => {
     
 return (    
     <div>
-        <Container>
+        <Container fluid style={{backgroundColor: 'rgba(183, 179, 179, 0.5)'}}>
                          <h3>Welcome</h3>
                             <h1>Wallet Balance: {walletBalance}</h1>
                             <h2>Username: {username}</h2>
