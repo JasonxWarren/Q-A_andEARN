@@ -1,47 +1,51 @@
 import React, { useEffect, useState } from 'react';
 import * as questionService from "../../api/question.service"
+import * as userProfileService from "../../api/userprofile.service"
 import Question from '../Question/QuestionCreate';
 import Answer from '../Answer/AnswerCreate.jsx';
-export default function QuestionView() {
-    
+import Container from 'react-bootstrap/Container';
+import Card from 'react-bootstrap/Card';
+import AlertDismissible from '../Answer/AnswerCreateToggle';
 
+export default function QuestionAnswerInfo(answerInformation) {
     const [question, setQuestion] = useState([]);
-    
+    const [budget, setBudget]= useState([]);
+    // const [user,setUser] = useState([]);
+
+   
     
     useEffect(() => {
         async function getQuestion() {
             const questions = await questionService.getAll();
+            console.log(questions.data.data)
+            console.log(answerInformation)
                 setQuestion(questions.data.data);
-                console.log(questions.data.data[0].name)
+                // setBudget(questions.data.data.budget)
+                // console.log(questions.data.data[0].name)
         }
         getQuestion();
     }, [])
-   
     
 
     return(
+        <Container fluid>
         <>
-            <h2>here</h2>
-            {/* <h3> { for (let i=0; i<question.length; i++) {
-                question[i].name?.map((naming,index)=> {
-                return (
-                    <li key={index}>  
-                    <p>{question.name}</p>
-                    </li>
-                )
-            }) };  </h3> */}
+          
             {question.map((questionInfo, index) => {
-                        return (
-                        <li style={{listStyle:"none"}} key={index}>
-                            <h4>{questionInfo?.name}</h4>
-                            {console.log("qindex questionInfo:"+questionInfo)}
-                            <Answer questionInfo={questionInfo}/>
-                            {/* {console.log(answerInfo)}  */}
-                        </li> )}
-            )}
-             <h1>{question[0]?.name}</h1>
+                {console.log(questionInfo)}
+                     if(answerInformation === questionInfo?.Answers[0]){
+                        return (<div>
+                         <h2>{questionInfo?.budget}</h2>           
+                        <h3>Question:{questionInfo?.name}</h3> 
+                        <p>{questionInfo?.description}</p> 
+                       </div>  )}
+                    })
+                }
+                    
+             {/* <h1>{question[0]?.name}</h1> */}
              {/* <Answer /> */}
             {/* <Question /> */}
         </>
+        </Container>
     )
 }

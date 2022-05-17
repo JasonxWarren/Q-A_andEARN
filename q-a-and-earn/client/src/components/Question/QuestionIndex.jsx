@@ -25,29 +25,11 @@ export default function QuestionView() {
         getQuestion();
         findUser();
     }, [])
-    // useEffect(() => {
-    //     async function findQuestions() {
-
-    //         for (let i=0; i<question.length; i++){
-    //              let formattedQuestion=question[i];
-    //              console.log("here:"+ formattedQuestion)
-    //         question.map((formattedQuestion) => {
-    //             if(formattedQuestion.name){
-    //                 formattedQuestion.name.map((naming) => {
-    //                     return findQuestions(naming)
-    //                 })
-    //             }
-    //                 else return null
-    //             })
-    //         }
-    //         }
-    //         findQuestions();
-    //     }, [question])
     
-
     return(
         <Container fluid>
         <>
+            
             {/* <h3> { for (let i=0; i<question.length; i++) {
                 question[i].name?.map((naming,index)=> {
                 return (

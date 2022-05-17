@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import * as answerService from "../../api/answer.service"
 import * as userProfileService from "../../api/userprofile.service"
 import Answer from '../Answer/AnswerCreate.jsx';
-import Question from '../Question/QuestionIndex';
+import Question from '../Question/QuestionIndexUser';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 
@@ -65,7 +65,8 @@ export default function AnswerView() {
                         <Card.Body>
                     <h3>{answerInfo?.answer}</h3> 
                    <h4>By Another</h4> 
-                   
+                   {console.log(answerInfo)}
+                   <Question answerInformation={answerInfo?.Questions[0]}/>
                    </Card.Body>
                    </Card>)
                         // {allUsers.map((UserInfo, index) => {
