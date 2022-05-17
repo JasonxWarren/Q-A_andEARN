@@ -5,6 +5,7 @@ import Question from '../Question/QuestionCreate';
 import Answer from '../Answer/AnswerCreate.jsx';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
+import AlertDismissible from '../Answer/AnswerCreateToggle';
 export default function QuestionView() {
 
     const [question, setQuestion] = useState([]);
@@ -73,7 +74,8 @@ export default function QuestionView() {
                     <h3>{questionInfo?.name}</h3> 
                     <p>{questionInfo?.description}</p>
                    <h4>By:Another</h4> 
-                   <Answer questionInfo={questionInfo}/>
+                   <AlertDismissible questionInfo={questionInfo} />
+                   {/* <Answer questionInfo={questionInfo}/> */}
                    </Card.Body>
                    </Card>)
                        }

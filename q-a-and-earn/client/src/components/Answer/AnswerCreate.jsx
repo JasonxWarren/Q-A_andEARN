@@ -3,7 +3,7 @@ import * as answerService from '../../api/answer.service';
 import { string } from 'prop-types';
 
 const Answer = (questionInfo) => {
-    console.log(questionInfo.questionInfo?._id)
+    console.log(questionInfo.questionInfo.questionInfo?._id)
     const [questionSelected, setQuestion]= useState("");
     const [answer, setAnswer] = useState("");
     // const [questionInter, setQuestionInter]=useState("")
@@ -23,8 +23,8 @@ const Answer = (questionInfo) => {
         }
     };
     useEffect(() => {
-        setQuestion(questionInfo.questionInfo?._id);
-    }, [questionInfo.questionInfo?._id]);
+        setQuestion(questionInfo.questionInfo.questionInfo?._id);
+    }, [questionInfo.questionInfo.questionInfo?._id]);
 
     return (
 <div>
