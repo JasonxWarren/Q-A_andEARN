@@ -1,6 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import * as userProfileService from "../../api/userprofile.service";
 import * as authService from "../../api/auth.service";
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+
 
 const UserIndex = () => {
     const [description, setDescription]= useState("");
@@ -53,14 +57,36 @@ const UserIndex = () => {
     
 return (    
     <div>
+        <Container>
                          <h3>Welcome</h3>
                             <h1>Wallet Balance: {walletBalance}</h1>
                             <h2>Username: {username}</h2>
                             <h3>Description: {description}</h3>
                             <button>{expertise}</button>
-    <form>
+    <Form>
+  <Form.Group className="mb-3">
+    <Form.Label>QWould you like to change your description:</Form.Label>
+    <Form.Control onChange={(e) => setDescription(e.target.value)}
+                value={description}
+                type="text"
+                name="User Description"
+                placeholder="tell everyone a little bit about yourself" />
+  </Form.Group>
+  <Form.Group className="mb-3" >
+    <Form.Label>Would you like to change your Expertise?</Form.Label>
+    <Form.Control onChange={(e) => setExpertise(e.target.value)}
+                value={expertise}
+                type="text"
+                name="reveal your expertise to others"
+                placeholder="input your expertise"
+            />
+  </Form.Group>
+  <Button vonClick={handleSubmit}>Update user profile information
+  </Button>
+</Form>
+    {/* <form>
         <label>
-            Would you like to change your description:
+            
             <break></break>
             <input
                 onChange={(e) => setDescription(e.target.value)}
@@ -82,9 +108,10 @@ return (
             />
         </label>
     </form>
-    <button onClick={handleSubmit}>Update user profile information </button>
+    <button onClick={handleSubmit}>Update user profile information </button> */}
     <break></break>
     <button onClick={() => {handleDelete(); alert("profile deleted")}}>Delete</button>
+    </Container>
 </div>               
 );
 } 

@@ -7,8 +7,8 @@ const userProfile = '/user';
 const show = (data, id) => {
     return client.get(`${userProfile}/${id}`, data)
 }
-const showAll = (data, id) => {
-    return client.get(`${userProfile}/${id}/allothers`, data)
+const showAll = (data) => {
+    return client.get(`${userProfile}/allothers`, data)
 }
 const update =(data, id) => {
     return client.put(`${userProfile}/${id}`, data)

@@ -17,6 +17,13 @@ export default function AnswerView() {
             setUser(res.data.data);
         });
     }
+    const findOtherUsers = async () => {
+       await userProfileService.showAll().then((res) => {
+        console.log(res.data)
+        setAllUsers(res.data.data)
+       })
+       
+    }
 
     useEffect(() => {
         async function getAnswer() {
@@ -27,6 +34,7 @@ export default function AnswerView() {
         }
         getAnswer();
         findUser();
+        findOtherUsers();
     }, [])
     return(
         <>
@@ -41,19 +49,31 @@ export default function AnswerView() {
             }) };  </h3> */}
             {answer.map((answerInfo, index) => {
                 if(user._id === answerInfo.User[0]){
-                    return <h1>we found your answer</h1>}
-                    else{
-                        return (
-                        
-                        <li style={{listStyle:"none"}} key={index}>
-                            <Card><h4>{answerInfo?.answer}</h4>
-                                 {/* <h5>{answerInfo?.</h5> */}
-                            </Card>
-                            {console.log(answerInfo)} 
-                        </li>
-                        
-                        )}  })
+                    return (<div>
+                    <h3 key={index}>{answerInfo?.answer}</h3>  
+                   </div>
+                           )
+                }
+                    else if(user._id !== answerInfo.User[0]){
+                        // {allUsers.map((UserInfo, index) => {
+                        //     if (UserInfo._id ===answerInfo.User[0]){
+                                return(
+                                    <li style={{listStyle:"none"}} key={index}>
+                                    <Card><h4>{answerInfo?.answer}</h4>
+                                         {/* <h5>{answerInfo?.</h5> */}
+                                    </Card>
+                                    {console.log(answerInfo)} 
+                                </li>
+                                    
+                                )
+                            //   }
+                            //    }
+                            //     )
+                    
+                            //       }         
             }
+            })
+        }
              {/* <h1>{answer[0].answer}</h1> */}
             <Question />
         </>
