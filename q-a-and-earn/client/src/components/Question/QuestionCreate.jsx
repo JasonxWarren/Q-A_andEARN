@@ -41,6 +41,14 @@ const Question = () => {
                     name="content"
                     placeholder="Add the meat of your question here" />
   </Form.Group>
+  <Form.Group className="mb-3">
+    <Form.Label>Pick how much you will like to spend(budget)</Form.Label>
+    <Form.Control  onChange={(e) => setBudget(e.target.value)}
+                    value={budget}
+                    type="number"
+                    name="content"
+                    placeholder="pick how much you are willing to spend, between $1-$99" />
+  </Form.Group>
   <Button variant="primary" type="submit" onClick={handleSubmit}>
     Submit
   </Button>
