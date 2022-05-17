@@ -7,7 +7,7 @@ const Answer = (questionInfo) => {
     const [questionSelected, setQuestion]= useState("");
     const [answer, setAnswer] = useState("");
     // const [questionInter, setQuestionInter]=useState("")
-    const handleSubmit = async () => {
+    const handleSubmit = async (questionInfo) => {
         console.log("here in answercreate")
         let newAnswer = { questionSelected, answer };
         console.log(newAnswer)
@@ -23,21 +23,22 @@ const Answer = (questionInfo) => {
         }
     };
     useEffect(() => {
-        setQuestion();
-    }, []);
+        setQuestion(questionInfo.questionInfo?._id);
+    }, [questionInfo.questionInfo?._id]);
 
     return (
 <div>
         <form>
-        <label>What question are you answering:{questionInfo.questionInfo._id}
+        <label>What question are you answering:
                 <input  
-                    onChange={(e) => setQuestion(questionInfo.questionInfo._id)}
+                    // onChange={(e) => setQuestion(e.target.value)}
                     value={questionSelected}
-                    type="text"
+                    type="hidden"
                     name="content"
                     placeholder={questionInfo.questionInfo?._id}
                 /></label>
-                <label>Add your Answer:
+    
+        <label>Add your Answer:
                 <input  
                     onChange={(e) => setAnswer(e.target.value)}
                     value={answer}
