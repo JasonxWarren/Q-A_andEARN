@@ -35,6 +35,7 @@ export default function AnswerView() {
         findOtherUsers();
     }, [])
     return(
+        <Container fluid>
         <>
             <h2>Welcome {user.username}</h2>
             {/* <h3> { for (let i=0; i<question.length; i++) {
@@ -48,13 +49,23 @@ export default function AnswerView() {
             {answer.map((answerInfo, index) => {
                 if(user._id === answerInfo.User[0]){
                     return (<div>
+                    <Card bg="secondary" border="success" style={{ width: '40rem' }}>
+                        <Card.Body>
                     <h3>{answerInfo?.answer}</h3> 
                    <h4>{user.username}</h4> 
+                   </Card.Body>
+                   </Card>
                    </div>
+                   
                            )
                 }
                     else if(user._id !== answerInfo.User[0]){
-                        return (<h1>here in else</h1>)
+                        return (<Card bg="secondary" border="warning" style={{ width: '18rem' }}>
+                        <Card.Body>
+                    <h3>{answerInfo?.answer}</h3> 
+                   <h4>{user.username}</h4> 
+                   </Card.Body>
+                   </Card>)
                         // {allUsers.map((UserInfo, index) => {
                         //     if (UserInfo._id ===answerInfo.User[0]){
                         //         return(
@@ -76,6 +87,8 @@ export default function AnswerView() {
         }
              {/* <h1>{answer[0].answer}</h1> */}
             <Question />
+            
         </>
+        </Container>
     )
 }
