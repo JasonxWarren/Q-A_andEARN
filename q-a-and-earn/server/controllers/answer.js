@@ -3,10 +3,10 @@ const db = require("../models");
 
 const index = (req, res) => {
     console.log("here in controllers")
-    let incomingReq = {
-        User: req.userId,
-    }
-    db.Answer.find(incomingReq, (err, foundAnswers) => {
+    // let incomingReq = {
+    //     User: req.userId,
+    // }
+    db.Answer.find({}, (err, foundAnswers) => {
         if (err) {
             return res
                 .status(400)

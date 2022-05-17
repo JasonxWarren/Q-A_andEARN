@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import * as answerService from '../../api/answer.service';
 import { string } from 'prop-types';
 
@@ -22,7 +22,9 @@ const Answer = (questionInfo) => {
                 alert("Your answer failed to save.", res.status)
         }
     };
-
+    useEffect(() => {
+        setQuestion();
+    }, []);
 
     return (
 <div>
