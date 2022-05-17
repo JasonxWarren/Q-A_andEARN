@@ -3,8 +3,10 @@ import * as questionService from "../../api/question.service"
 import Question from '../Question/QuestionCreate';
 import Answer from '../Answer/AnswerCreate.jsx';
 export default function QuestionView() {
+    
 
     const [question, setQuestion] = useState([]);
+    
     
     useEffect(() => {
         async function getQuestion() {
