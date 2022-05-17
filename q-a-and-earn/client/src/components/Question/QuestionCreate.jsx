@@ -25,7 +25,7 @@ const Question = () => {
         }
     };
     return (
-<div>
+<div className="container1">
     <Container>
     <Form>
   <Form.Group className="mb-3" >

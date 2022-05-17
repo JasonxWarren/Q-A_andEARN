@@ -46,8 +46,8 @@ export default function QuestionView() {
     
 
     return(
+        <Container fluid>
         <>
-            <h2>here</h2>
             {/* <h3> { for (let i=0; i<question.length; i++) {
                 question[i].name?.map((naming,index)=> {
                 return (
@@ -96,5 +96,6 @@ export default function QuestionView() {
              {/* <Answer /> */}
             {/* <Question /> */}
         </>
+        </Container>
     )
 }

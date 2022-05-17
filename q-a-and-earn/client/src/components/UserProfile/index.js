@@ -65,7 +65,7 @@ return (
                             <button>{expertise}</button>
     <Form>
   <Form.Group className="mb-3">
-    <Form.Label>QWould you like to change your description:</Form.Label>
+    <Form.Label>Would you like to change your description:</Form.Label>
     <Form.Control onChange={(e) => setDescription(e.target.value)}
                 value={description}
                 type="text"

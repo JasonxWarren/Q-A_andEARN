@@ -49,7 +49,6 @@ const Home = () => {
               checkUserActive={() => userActive()}
           />
         </div>
-        { <h1>Successful Sign In</h1> }
 
             <Routes>
                 <Route  
@@ -91,7 +90,7 @@ const Home = () => {
                         <Routes>
                             <Route  
                                 path='register'
-                                element={<UserIndex/>}
+                                element={<Welcome/>}
                             />
                     
                         </Routes>

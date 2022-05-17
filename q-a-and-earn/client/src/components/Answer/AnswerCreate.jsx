@@ -39,7 +39,7 @@ const Answer = (questionInfo) => {
                 /></label>
     
         <label>Add your Answer:
-                <input  
+                <input  size="50"
                     onChange={(e) => setAnswer(e.target.value)}
                     value={answer}
                     type="text"
