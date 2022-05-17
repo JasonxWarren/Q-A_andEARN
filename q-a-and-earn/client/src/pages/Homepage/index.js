@@ -63,7 +63,11 @@ const Home = () => {
                     <Route  
                     path='/question/'
                     element={<QuestionIndex/>}
-                    />    
+                    /> 
+                     {/* <Route  
+                    path='/question/myquestions'
+                    element={<QuestionIndexUser/>}
+                    />     */}
                      <Route  
                     path='/answer/create'
                     element={<Answer/>}
@@ -72,6 +76,10 @@ const Home = () => {
                     path='/answer/'
                     element={<AnswerView/>}
                     />   
+                     {/* <Route  
+                    path='/answer/myanswers'
+                    element={<AnswerIndexUser/>}
+                    /> */}
             </Routes>
         </>
     )
