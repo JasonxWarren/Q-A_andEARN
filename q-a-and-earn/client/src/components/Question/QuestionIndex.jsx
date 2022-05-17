@@ -59,7 +59,7 @@ export default function QuestionView() {
             {question.map((questionInfo, index) => {
                      if(user._id === questionInfo.User[0]){
                         return (<div>
-                        <Card bg="secondary" border="success" style={{ width: '60rem' }}>
+                        <Card style={{backgroundColor: 'rgba(183, 179, 179, 0.5)'}} border="success">
                             <Card.Body>
                         <h6> this is your question!</h6>        
                         <h3>{questionInfo?.name}</h3> 
@@ -69,7 +69,7 @@ export default function QuestionView() {
                        </Card>
                        </div>  )}
                        else if(user._id !== questionInfo.User[0]){
-                        return (<Card bg="secondary" border="warning" style={{ width: '60rem' }}>
+                        return (<Card style={{backgroundColor: 'rgba(183, 179, 179, 0.5)'}} border="warning">
                         <Card.Body>
                     <h3>{questionInfo?.name}</h3> 
                     <p>{questionInfo?.description}</p>

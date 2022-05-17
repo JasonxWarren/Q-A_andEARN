@@ -17,8 +17,8 @@ export default function NavBar({checkUserActive}) {
         }
 
     return (      
-        <div>
-            <Container>
+        <div className="navbar-custom">
+            <Container fluid>
             <div>
                 <h1>Q and A</h1>
             </div>

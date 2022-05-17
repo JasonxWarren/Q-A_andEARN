@@ -8,7 +8,7 @@ export default function AlertDismissible(questionInfo) {
   
     return (
       <>
-        <Alert show={show} variant="light">
+        <Alert show={show} variant="light" >
           <Alert.Heading>Answer the question and earn some tokens</Alert.Heading>
           {console.log(questionInfo)}
           <Answer questionInfo={questionInfo}/>

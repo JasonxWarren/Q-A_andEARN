@@ -49,18 +49,19 @@ export default function AnswerView() {
             {answer.map((answerInfo, index) => {
                 if(user._id === answerInfo.User[0]){
                     return (<div>
-                    <Card bg="secondary" border="success" style={{ width: '40rem' }}>
+                    <Card style={{backgroundColor: 'rgba(183, 179, 179, 0.5)'}} border="success">
                         <Card.Body>
                     <h3>{answerInfo?.answer}</h3> 
                    <h4>{user.username}</h4> 
                    </Card.Body>
                    </Card>
+                   <span></span>
                    </div>
                    
                            )
                 }
                     else if(user._id !== answerInfo.User[0]){
-                        return (<Card bg="secondary" border="warning" style={{ width: '18rem' }}>
+                        return (<Card style={{backgroundColor: 'rgba(183, 179, 179, 0.5)'}} border="warning">
                         <Card.Body>
                     <h3>{answerInfo?.answer}</h3> 
                    <h4>{user.username}</h4> 
