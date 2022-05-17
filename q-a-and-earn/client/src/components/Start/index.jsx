@@ -7,6 +7,7 @@ const Welcome = ({ checkUserActive }) => {
 		<div className="container1">
 			<div className="center">
 			<div>
+			<h1 style={{fontSize: "50px", color: "white", textDecoration: "underline"}}>Q and A</h1>
 			<h1>Welcome</h1>
 			</div>
 				
