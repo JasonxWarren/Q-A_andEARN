@@ -30,14 +30,7 @@ export default function QuestionView() {
         <Container fluid>
         <>
             
-            {/* <h3> { for (let i=0; i<question.length; i++) {
-                question[i].name?.map((naming,index)=> {
-                return (
-                    <li key={index}>  
-                    <p>{question.name}</p>
-                    </li>
-                )
-            }) };  </h3> */}
+            
             {question.map((questionInfo, index) => {
                      if(user._id === questionInfo.User[0]){
                         return (<div>
@@ -63,16 +56,6 @@ export default function QuestionView() {
                        }
                     })
                 }
-                    {/* //    return (
-                                
-
-
-                    //     <li style={{listStyle:"none"}} key={index}>
-                    //         <h4>{questionInfo?.name}</h4>
-                    //         {console.log("qindex questionInfo:"+questionInfo)}
-                    //         <Answer questionInfo={questionInfo}/>
-                    //         {/* {console.log(answerInfo)}  */}
-                    {/* //     </li> )} */} 
             
              <h1>{question[0]?.name}</h1>
              {/* <Answer /> */}

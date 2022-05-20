@@ -61,7 +61,7 @@ const create = (req, res) => {
                 error: err 
             })
         } else {
-            // console.log("savedPost: ",savedPost)
+        
             db.User.findById(incomingReq.User)
             .exec(function (err, foundUser) {
                 if (err) return res 
