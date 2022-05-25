@@ -6,7 +6,6 @@ const Answer = (questionInfo) => {
     console.log(questionInfo.questionInfo.questionInfo?._id)
     const [questionSelected, setQuestion]= useState("");
     const [answer, setAnswer] = useState("");
-    // const [questionInter, setQuestionInter]=useState("")
     const handleSubmit = async (questionInfo) => {
         console.log("here in answercreate")
         let newAnswer = { questionSelected, answer };
@@ -15,7 +14,6 @@ const Answer = (questionInfo) => {
             .then(() => {
                 setQuestion(questionSelected);
                 setAnswer("");
-                // console.log(newAnswer);
             });
 
         if (!res === 201) {
@@ -31,7 +29,6 @@ const Answer = (questionInfo) => {
         <form>
         <label>What question are you answering:
                 <input  
-                    // onChange={(e) => setQuestion(e.target.value)}
                     value={questionSelected}
                     type="hidden"
                     name="content"

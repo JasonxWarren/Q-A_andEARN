@@ -50,7 +50,6 @@ export default function QuestionView() {
                     <p>{questionInfo?.description}</p>
                    <h4>By:Another</h4> 
                    <AlertDismissible questionInfo={questionInfo} />
-                   {/* <Answer questionInfo={questionInfo}/> */}
                    </Card.Body>
                    </Card>)
                        }
@@ -58,8 +57,7 @@ export default function QuestionView() {
                 }
             
              <h1>{question[0]?.name}</h1>
-             {/* <Answer /> */}
-            {/* <Question /> */}
+            
         </>
         </Container>
     )

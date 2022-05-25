@@ -68,27 +68,10 @@ export default function AnswerView() {
                    {console.log(answerInfo)}
                    <Question answerInformation={answerInfo?.Questions[0]}/>
                    </Card.Body>
-                   </Card>)
-                        // {allUsers.map((UserInfo, index) => {
-                        //     if (UserInfo._id ===answerInfo.User[0]){
-                        //         return(
-                        //             <li style={{listStyle:"none"}} key={index}>
-                        //             <Card><h4>{answerInfo?.answer}</h4>
-                        //                  {/* <h5>{answerInfo?.</h5> */}
-                        //             </Card>
-                        //             {console.log(answerInfo)} 
-                        //         </li>
-                                    
-                        //         )
-                        //       }
-                        //        }
-                        //         )
-                    
-                        //           }         
+                   </Card>)    
             }
             })
         }
-             {/* <h1>{answer[0].answer}</h1> */}
             <Question />
             
         </>

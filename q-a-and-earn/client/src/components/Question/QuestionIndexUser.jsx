@@ -41,10 +41,7 @@ export default function QuestionAnswerInfo(answerInformation) {
                        </div>  )}
                     })
                 }
-                    
-             {/* <h1>{question[0]?.name}</h1> */}
-             {/* <Answer /> */}
-            {/* <Question /> */}
+           
         </>
         </Container>
     )
