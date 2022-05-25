@@ -42,21 +42,26 @@ export default function QuestionView() {
                        <h4>By: {user.username}</h4> 
                        </Card.Body>
                        </Card>
+                       <span style={{ marginTop: '.25rem' }}>question </span>
                        </div>  )}
                        else if(user._id !== questionInfo.User[0]){
-                        return (<Card style={{backgroundColor: 'rgba(183, 179, 179, 0.5)'}} border="warning">
+                        return (<div>
+                        <Card style={{backgroundColor: 'rgba(183, 179, 179, 0.5)'}} border="warning">
                         <Card.Body>
                     <h3>{questionInfo?.name}</h3> 
                     <p>{questionInfo?.description}</p>
                    <h4>By:Another</h4> 
                    <AlertDismissible questionInfo={questionInfo} />
                    </Card.Body>
-                   </Card>)
+                   </Card>
+                   <span style={{ marginTop: '.25rem' }}>question </span>
+                   </div>
+                    )
                        }
                     })
                 }
             
-             <h1>{question[0]?.name}</h1>
+             {/* <h1>{question[0]?.name}</h1> */}
             
         </>
         </Container>
