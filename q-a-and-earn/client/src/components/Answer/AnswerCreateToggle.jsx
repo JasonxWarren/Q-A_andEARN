@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button'
 import Answer from '../Answer/AnswerCreate.jsx';
 
 export default function AlertDismissible(questionInfo) {
-    const [show, setShow] = useState(true);
+    const [show, setShow] = useState(false);
   
     return (
       <>
